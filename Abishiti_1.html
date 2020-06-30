@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>笔试题--重点</title>
+</head>
+
+<body>
+    <script>
+        // 鄙视题：将字符串中每个单词的首字母转为大写
+        var str = "you can you up";
+        // 使用回调函数
+        var result = str.replace(/\b[a-z]/ig, function (suiyizhi) {
+            // 可以使用打桩来判断替换的次数和替换的内容
+            console.log(`替换的次数,替换的内容${suiyizhi}`);
+            return suiyizhi.toUpperCase();
+        });
+
+        console.log(result);//You Can You Up
+    </script>
+</body>
+
+</html>

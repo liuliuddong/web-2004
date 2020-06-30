@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search-v1</title>
+</head>
+
+<body>
+    <script>
+        // 请用户输入一条消息
+        var msg = prompt("请输入你的消息内容");
+        // 查找消息是否包含符合正则要求的敏感词
+        var i = msg.search(/([我卧]|wo)\s*([草操艹槽]|cao)/i);
+        // 如果找到敏感词，返回敏感词位置
+        // 找不到，返回-1
+        // 如果找到敏感词，
+        if (i != -1) {
+            document.write(`<h1 style="color:red">包含敏感词，禁止显示</h1>`);
+        } else {
+            document.write(`<h1 style="green">然哥说${msg}</h1>`);
+        }
+            // 就在网页中提示，包含敏感词，禁止显示
+            //不包含敏感词，就显示 然哥说+内容 
+    </script>
+</body>
+
+</html>

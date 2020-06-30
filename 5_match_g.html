@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "老师：请用小红 我的 朋友造句。小亮：小红是我的朋友。小然：朋友，小红是我的！";
+        //希望查找出str中所有以小字开头的人名
+        // 因为汉子没有大小写之分，所以不加i
+        // var arr = str.match(/小[\u4e00-\u9fa5]/g);
+
+        // 显示共替换的多少次
+        var arr = str.match(/小[\u4e00-\u9fa5]/ig);
+        // 次数  arr.length
+        str = str.replace(/小[\u4e00-\u9fa5]/ig, "**");
+        // if (arr != null) {
+        //     console.log(`共替换了${arr.length}处`);
+        // } else {
+        //     console.log(`共替换了0处 `);
+        // }
+        console.log(`共替换了${arr != null ? arr.length : 0}处`);
+        console.log(str);
+    </script>
+</body>
+
+</html>

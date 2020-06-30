@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //想把电子邮件切割为用户名和域名两部分
+        //  创建电子邮件
+        var email = "liudong@qq.com";
+        // 把邮件进行切割
+        var result = email.split("@");
+        //切割不包含切割符
+        console.log(result);
+
+
+        // 把一句英语切割成英文单词
+        var str="you can you up";
+        // 通过英文之间的空白来切割，此时就应该用正则表达式了
+        var result3=str.split(/\s+/);
+        console.log(result3);
+
+        // 笔试题：翻转字符串
+        // 创建字符串
+        var str2 = "helloworld";
+        // qiege字符串，根据空字符切割，把字符串转换为数组
+        var result2 = str2.split("");
+        // 字符串此时就转换为数组了，就能使用数组的api
+        result2.reverse();
+        // 此时已经翻转完成了  但是我们要返回的时候，是一个字符串，所以，使用join将数组转换为字符串
+        // 如果join什么都不写，默认用，连接内容
+        str2 = result2.join("");
+        console.log(str2);
+    </script>
+</body>
+
+</html>

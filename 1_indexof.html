@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JScore第二天---indexof</title>
+</head>
+
+<body>
+    <!-- <h1>欢迎来到第三阶段</h1> -->
+    <!-- 网页中如果要写js，要卸载scipt标签中 -->
+    <script>
+        // 请用户输入一条消息内容
+        var msg = prompt("请输入内容");
+        // 查找消息中是否包含敏感词我草
+        var i = msg.indexOf("我草");
+        // 如果包含敏感词
+        if (i != -1) {
+            document.write(`<h1 style="color:red">包含敏感词，禁止发送</h1>`);
+        }
+        // 就在网页中提示：包含敏感词。禁止发送
+        // 否则如果不包含敏感词
+        else {
+            document.write(`<h1 style="color:green">${msg}</h1>`);
+        }
+                // 就在
+    </script>
+</body>
+
+</html>

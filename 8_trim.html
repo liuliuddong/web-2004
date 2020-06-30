@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 需要三个函数
+        //trim 修剪
+        // trimleft() 可去掉字符串开头的空字符 
+        function trimleft(字符串) {
+            var str2 = 字符串.replace(/^\s/, "");
+            return str2;
+        }
+        // trimright()  可去掉字符串结尾的空字符
+        function trimright(字符串) {
+            var str2 = 字符串.replace(/\s+$/, "");
+            return str2;
+        }
+        // trim() 可去掉字符串开头和结尾的空字符
+        function trim(字符串) {
+            var str2 = 字符串.replace(/^\s+|\s+$/g, "");
+            return str2;
+        }
+        var str = "  hello  world  "
+        console.log(trimleft(str));
+        console.log(trimright(str));
+        console.log(trim(str));
+
+
+        //es6中定义方法，可以直接去除掉空白 
+        // console.log(str.trimleft());
+        // console.log(str.trimright());
+        // console.log(str.trim());
+    </script>
+
+</body>
+
+</html>

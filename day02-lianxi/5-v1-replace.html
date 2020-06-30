@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "老师:请用小红 我的 朋友造句。小亮:小红是我的朋友。小然:朋友！小红是我的！";
+        // 用match在替换之前照一次，替换的次数就是match找到的次数
+        var mar = str.match(/小[\u4e00-\u9fa5]/g);//match找到的值是放在一个数组里的，数组的长度，就是我们想要找的次数
+        //    显示那些人名被替换了
+        console.log(mar);
+        // 查找所有以小字开头的人名
+        // 把所有以小字开头的人名替换成**
+        var arr = str.replace(/小[\u4e00-\u9fa5]/g, "**");
+        // 在控制台输出替换后的结果
+        console.log(arr);
+        // 还想显示一共替换了多少处
+        // 用match在替换之前照一次
+        // 找到敏感词 返回的是一个数组   没找到  返回的是null
+        // 找到
+        if (mar != null) {
+            // 如果找到敏感词，则输出mar.length次数
+            document.write(`<h1>一共替换了${mar.length}处</h1>`);
+        } else {
+            // 没有找到  用0代替
+            document.write(`<h1>一共替换了0次</h1>`);
+        }
+        // 三母运算符
+        // console.log0(mar != null ? mar.length : 0);
+    </script>
+</body>
+
+</html>

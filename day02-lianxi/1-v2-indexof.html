@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexog-v2</title>
+</head>
+
+<body>
+    <script>
+        // 请求用户输入消息内容
+        var msg = prompt("请用户输入一条消息");
+        // 查找用户输入的内容中是否包含敏感词“我草”
+        var i = msg.indexOf("我草");
+        // 如果不包含，则返回-1
+        // 包含
+        if (i != -1) {
+            // 向网页中输入红色字体，内容为包含敏感词，禁止发送
+            document.write(`<h1 style="color:red">包含敏感词，禁止发送</h1>`);
+        }
+        else {
+            // 如果不包含，则向网页发送然哥说+用户输入的内容
+            document.write(`<h1 style="color:green">然哥说${msg}</h1>`);
+        }
+    </script>
+</body>
+
+</html>

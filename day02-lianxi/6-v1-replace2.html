@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 鄙视题: 将字符串中每个单词首字母改为大写: 
+        var str = "you can you up"
+        // 则这里面的敏感词就是y c y u
+        // 查找敏感词内容并替换,即为每个单词首字母
+        // xcan 四种可能 y c y u
+        var rep = str.replace(/\b[a-z]/ig, function (xcan) {
+            // 打桩，可以让回调函数现原型
+            console.log(`执行了一次${xcan}，匹配的内容是${xcan.toUpperCase()}`);
+            // 返回值也是四种可能 Y C Y U
+            return xcan.toUpperCase();
+        });
+        console.log(rep);// You Can You Up
+    </script>
+</body>
+
+</html>

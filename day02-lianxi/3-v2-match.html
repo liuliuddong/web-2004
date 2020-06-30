@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match-v1</title>
+</head>
+
+<body>
+    <script>
+        // 请输入你的消息内容
+        var msg = prompt("请输入你的消息内容");
+        // 查找包含敏感词的内容
+        var arr = msg.match(/([我卧]|wo)\s*([草操艹]|cao)/i);
+        // 如果找到  返回的是数组
+        // 如果找不到，返回null
+        // 找到
+        if (arr != null) {
+            //如果找到  网页上显示红色字体，咋什么位置找到敏感词，敏感词的内容是？
+            document.write(`<h1 style="color:red">位置${arr.index}包含敏感词${arr[0]}，禁止发送</h1>`);
+        } else {
+            // 如果没找到  网页上显示绿色字体然哥说+消息内容
+            document.write(`<h1 style="color:green">然哥说${msg}</h1>`);
+
+        }
+
+    </script>
+</body>
+
+</html>
